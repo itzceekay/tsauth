@@ -5,6 +5,9 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import mongoose from 'mongoose';
+//@ts-ignore
+import {MONGO_URL} from './mongo.js';
+
 
 
 const app = express();
@@ -20,10 +23,8 @@ app.use(cookieParser());
 const server = http.createServer(app);
 
 server.listen(8081, () => {
-    console.log("server running");
+    console.log("server running!!");
 } )
-
-const MONGO_URL = 'mongodb+srv://kirustudiesalot:6CCXU9RFxacv22FI@cluster0.tmqzjrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);

@@ -13,6 +13,4 @@ const options = {
 // Constructing the MongoDB URL
 const MONGO_URL = `mongodb+srv://${username}:${password}@${hostname}/${database}?${new URLSearchParams(options).toString()}`;
 
-module.exports = {
-    MONGO_URL
-};
+module.exports = { MONGO_URL };
